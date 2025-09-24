@@ -1,128 +1,338 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Loot Weapon Start: 将“战利品武器选择”挂载到游戏开局事件 START_BEACON_PRESELECT 上 -->
+﻿<FTL>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!-- Loot Weapon Start: mount loot selection to START_BEACON_PRESELECT (ASCII only texts) -->
 
-<!-- 在开局预选事件中追加一个入口，进入我们的“战利品选择”事件 -->
-<mod:findName type="event" name="START_BEACON_PRESELECT">
-  <mod-append:choice>
-    <text>[Loot] 选择战利品武器</text>
-    <event load="LW_LOOT_WEAPON_SELECT"/>
-  </mod-append:choice>
-  
-  <!-- 可选：若你想隐藏入口但仍可用于链式流程，可改为 hidden="true" -->
-  <!-- <mod-append:choice hidden="true"> -->
-  <!--   <text>选择战利品</text> -->
-  <!--   <event load="LW_LOOT_WEAPON_SELECT"/> -->
-  <!-- </mod-append:choice> -->
-</mod:findName>
+  <!-- Add an entry to the start preselect event -->
+  <mod:findName type="event" name="START_BEACON_PRESELECT">
+    <mod-append:choice>
+      <text>[Loot] Choose a loot weapon</text>
+      <event load="LW_LOOT_WEAPON_SELECT"/>
+    </mod-append:choice>
+  </mod:findName>
 
-<!-- 主选择事件：在这里配置 N 个武器选项 -->
-<event name="LW_LOOT_WEAPON_SELECT">
-  <text>选择一个战利品武器（将加入到仓库）。</text>
+  <!-- Main selection event -->
+  <event name="LW_LOOT_WEAPON_SELECT">
+    <text>Choose one loot weapon to add to storage.</text>
 
-  <!-- 按需增删 choice 来调整 N，替换 weapon 的 blueprint ID 即可 -->
-  <choice>
-    <text>战利品：叛军 I（LOOT_REBEL_1）</text>
-    <event>
-      <text>已获得：LOOT_REBEL_1（加入到仓库）。</text>
-      <weapon name="LOOT_REBEL_1" />
-      <!-- 回到开局流程，避免停留在此事件 -->
-      <choice hidden="true">
-        <text>返回</text>
+    <choice req="ACH ACH_TRANS_REBEL">
+      <text>Loot: Rebel I (LOOT_REBEL_1)</text>
+      <event>
+        <text>Received: LOOT_REBEL_1 (added to storage).</text>
+        <weapon name="LOOT_REBEL_1" />
+        <choice hidden="true">
+          <text>Back</text>
+          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
+        </choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_CULTIST">
+      <text>Loot: Cultist I (LOOT_CULTIST_1)</text>
+      <event>
+        <text>Received: LOOT_CULTIST_1 (added to storage).</text>
+        <weapon name="LOOT_CULTIST_1" />
+        <choice hidden="true">
+          <text>Back</text>
+          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
+        </choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_COALITION">
+      <text>Loot: Coalition I (LOOT_COALITION_1)</text>
+      <event>
+        <text>Received: LOOT_COALITION_1 (added to storage).</text>
+        <weapon name="LOOT_COALITION_1" />
+        <choice hidden="true">
+          <text>Back</text>
+          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
+        </choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_SLUG">
+      <text>Loot: Slug I (LOOT_SLUG_1)</text>
+      <event>
+        <text>Received: LOOT_SLUG_1 (added to storage).</text>
+        <weapon name="LOOT_SLUG_1" />
+        <choice hidden="true">
+          <text>Back</text>
+          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
+        </choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_ROCK">
+      <text>Loot: Rock I (LOOT_ROCK_1)</text>
+      <event>
+        <text>Received: LOOT_ROCK_1 (added to storage).</text>
+        <weapon name="LOOT_ROCK_1" />
+        <choice hidden="true">
+          <text>Back</text>
+          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
+        </choice>
+      </event>
+    </choice>
+
+        <!-- Union -->
+    <choice req="ACH ACH_TRANS_UNION">
+      <text>Union (LOOT_UNION_1)</text>
+      <event>
+        <text>Received: LOOT_UNION_1 (added to storage).</text>
+        <weapon name="LOOT_UNION_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_UNION">
+      <text>Union (LOOT_UNION_2)</text>
+      <event>
+        <text>Received: LOOT_UNION_2 (added to storage).</text>
+        <weapon name="LOOT_UNION_2" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Militia -->
+    <choice req="ACH ACH_TRANS_MILITIA">
+      <text>Militia (LOOT_MILITIA_1)</text>
+      <event>
+        <text>Received: LOOT_MILITIA_1 (added to storage).</text>
+        <weapon name="LOOT_MILITIA_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Federation -->
+    <choice req="ACH ACH_TRANS_FEDERATION">
+      <text>Federation (LOOT_FEDERATION_1)</text>
+      <event>
+        <text>Received: LOOT_FEDERATION_1 (added to storage).</text>
+        <weapon name="LOOT_FEDERATION_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_FEDERATION">
+      <text>Federation (LOOT_FEDERATION_2)</text>
+      <event>
+        <text>Received: LOOT_FEDERATION_2 (added to storage).</text>
+        <weapon name="LOOT_FEDERATION_2" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Zoltan / Ministry -->
+    <choice req="ACH ACH_TRANS_ZOLTAN">
+      <text>Ministry (LOOT_ZOLTAN_1)</text>
+      <event>
+        <text>Received: LOOT_ZOLTAN_1 (added to storage).</text>
+        <weapon name="LOOT_ZOLTAN_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_ZOLTAN">
+      <text>Ministry (LOOT_ZOLTAN_2)</text>
+      <event>
+        <text>Received: LOOT_ZOLTAN_2 (added to storage).</text>
+        <weapon name="LOOT_ZOLTAN_2" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Duskbringer -->
+    <choice req="ACH ACH_TRANS_DUSKBRINGER">
+      <text>Duskbringer (LOOT_DUSKBRINGER_1)</text>
+      <event>
+        <text>Received: LOOT_DUSKBRINGER_1 (added to storage).</text>
+        <weapon name="LOOT_DUSKBRINGER_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Mantis / Hive -->
+    <choice req="ACH ACH_TRANS_MANTIS">
+      <text>Hive (LOOT_MANTIS_1)</text>
+      <event>
+        <text>Received: LOOT_MANTIS_1 (added to storage).</text>
+        <weapon name="LOOT_MANTIS_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_MANTIS">
+      <text>Hive (LOOT_MANTIS_2)</text>
+      <event>
+        <text>Received: LOOT_MANTIS_2 (added to storage).</text>
+        <weapon name="LOOT_MANTIS_2" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Free Mantis -->
+    <choice req="ACH ACH_TRANS_FREEMANTIS">
+      <text>Free Mantis (LOOT_FREEMANTIS_1)</text>
+      <event>
+        <text>Received: LOOT_FREEMANTIS_1 (added to storage).</text>
+        <weapon name="LOOT_FREEMANTIS_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_FREEMANTIS">
+      <text>Free Mantis (LOOT_FREEMANTIS_2)</text>
+      <event>
+        <text>Received: LOOT_FREEMANTIS_2 (added to storage).</text>
+        <weapon name="LOOT_FREEMANTIS_2" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Lost Sun -->
+    <choice req="ACH ACH_TRANS_LOSTSUN">
+      <text>Lost Sun (LOOT_LOSTSUN_1)</text>
+      <event>
+        <text>Received: LOOT_LOSTSUN_1 (added to storage).</text>
+        <weapon name="LOOT_LOSTSUN_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_LOSTSUN">
+      <text>Lost Sun (LOOT_LOSTSUN_2)</text>
+      <event>
+        <text>Received: LOOT_LOSTSUN_2 (added to storage).</text>
+        <weapon name="LOOT_LOSTSUN_2" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Slug (additional) -->
+    <choice req="ACH ACH_TRANS_SLUG">
+      <text>Slug (LOOT_SLUG_2)</text>
+      <event>
+        <text>Received: LOOT_SLUG_2 (added to storage).</text>
+        <weapon name="LOOT_SLUG_2" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Clan (Guild) -->
+    <choice req="ACH ACH_TRANS_CLAN">
+      <text>Clan (LOOT_CLAN_1)</text>
+      <event>
+        <text>Received: LOOT_CLAN_1 (added to storage).</text>
+        <weapon name="LOOT_CLAN_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Lanius -->
+    <choice req="ACH ACH_TRANS_LANIUS">
+      <text>Lanius (LOOT_LANIUS_1)</text>
+      <event>
+        <text>Received: LOOT_LANIUS_1 (added to storage).</text>
+        <weapon name="LOOT_LANIUS_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Dynasty -->
+    <choice req="ACH ACH_TRANS_DYNASTY">
+      <text>Dynasty (LOOT_DYNASTY_1)</text>
+      <event>
+        <text>Received: LOOT_DYNASTY_1 (added to storage).</text>
+        <weapon name="LOOT_DYNASTY_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_DYNASTY">
+      <text>Dynasty (LOOT_DYNASTY_2)</text>
+      <event>
+        <text>Received: LOOT_DYNASTY_2 (added to storage).</text>
+        <weapon name="LOOT_DYNASTY_2" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Shell -->
+    <choice req="ACH ACH_TRANS_SHELL">
+      <text>Shell (LOOT_SHELL_1)</text>
+      <event>
+        <text>Received: LOOT_SHELL_1 (added to storage).</text>
+        <weapon name="LOOT_SHELL_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_SHELL">
+      <text>Shell (LOOT_SHELL_2)</text>
+      <event>
+        <text>Received: LOOT_SHELL_2 (added to storage).</text>
+        <weapon name="LOOT_SHELL_2" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Leech -->
+    <choice req="ACH ACH_TRANS_LEECH">
+      <text>Leech (LOOT_LEECH_1)</text>
+      <event>
+        <text>Received: LOOT_LEECH_1 (added to storage).</text>
+        <weapon name="LOOT_LEECH_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Cultist (additional already exists) -->
+    <choice req="ACH ACH_TRANS_KNIGHT">
+      <text>Knight (LOOT_KNIGHT_1)</text>
+      <event>
+        <text>Received: LOOT_KNIGHT_1 (added to storage).</text>
+        <weapon name="LOOT_KNIGHT_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Auto (Conservative Drone) -->
+    <choice req="ACH ACH_TRANS_AUTO">
+      <text>Auto (COMBAT_CONSERVATIVE_LASER)</text>
+      <event>
+        <text>Received: COMBAT_CONSERVATIVE_LASER (added to storage).</text>
+        <drone name="COMBAT_CONSERVATIVE_LASER" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Harmony (Combat or Defense Drone) -->
+    <choice req="ACH ACH_TRANS_HARMONY">
+      <text>Harmony (COMBAT_1)</text>
+      <event>
+        <text>Received: COMBAT_1 (added to storage).</text>
+        <drone name="COMBAT_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_HARMONY">
+      <text>Harmony (DEFENSE_1)</text>
+      <event>
+        <text>Received: DEFENSE_1 (added to storage).</text>
+        <drone name="DEFENSE_1" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Separatist (Battle Drone) -->
+    <choice req="ACH ACH_TRANS_SEPARATIST">
+      <text>Separatist (BATTLE)</text>
+      <event>
+        <text>Received: BATTLE (added to storage).</text>
+        <drone name="BATTLE" />
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice>
+      <text>Back to start menu</text>
+      <event>
         <loadEvent>START_BEACON_PRESELECT</loadEvent>
-      </choice>
-    </event>
-  </choice>
+      </event>
+    </choice>
+  </event>
 
-  <choice>
-    <text>战利品：教徒 I（LOOT_CULTIST_1）</text>
-    <event>
-      <text>已获得：LOOT_CULTIST_1（加入到仓库）。</text>
-      <weapon name="LOOT_CULTIST_1" />
-      <choice hidden="true">
-        <text>返回</text>
-        <loadEvent>START_BEACON_PRESELECT</loadEvent>
-      </choice>
-    </event>
-  </choice>
+</FTL>
 
-  <choice>
-    <text>战利品：联盟 I（LOOT_COALITION_1）</text>
-    <event>
-      <text>已获得：LOOT_COALITION_1（加入到仓库）。</text>
-      <weapon name="LOOT_COALITION_1" />
-      <choice hidden="true">
-        <text>返回</text>
-        <loadEvent>START_BEACON_PRESELECT</loadEvent>
-      </choice>
-    </event>
-  </choice>
 
-  <choice>
-    <text>战利品：蛞蝓 I（LOOT_SLUG_1）</text>
-    <event>
-      <text>已获得：LOOT_SLUG_1（加入到仓库）。</text>
-      <weapon name="LOOT_SLUG_1" />
-      <choice hidden="true">
-        <text>返回</text>
-        <loadEvent>START_BEACON_PRESELECT</loadEvent>
-      </choice>
-    </event>
-  </choice>
-
-  <choice>
-    <text>战利品：岩石 I（LOOT_ROCK_1）</text>
-    <event>
-      <text>已获得：LOOT_ROCK_1（加入到仓库）。</text>
-      <weapon name="LOOT_ROCK_1" />
-      <choice hidden="true">
-        <text>返回</text>
-        <loadEvent>START_BEACON_PRESELECT</loadEvent>
-      </choice>
-    </event>
-  </choice>
-
-  <!-- 随机选一个（保持与下方随机事件的列表一致）
-  <choice>
-    <text>随机（从上面的战利品中随机选一个）</text>
-    <event load="LW_LOOT_WEAPON_RANDOM"/>
-  </choice> -->
-
-  <!-- 不想选就返回开局菜单 -->
-  <choice>
-    <text>返回（回到开局菜单）</text>
-    <event>
-      <loadEvent>START_BEACON_PRESELECT</loadEvent>
-    </event>
-  </choice>
-</event>
-
-<!-- 随机从上面相同配置中抽取，并在发放后返回开局事件
-<event name="LW_LOOT_WEAPON_RANDOM">
-  <loadEventList seeded="false">
-    <event>
-      <text>已获得：LOOT_REBEL_1（随机）。</text>
-      <weapon name="LOOT_REBEL_1" />
-      <choice hidden="true"><text>返回</text><loadEvent>START_BEACON_PRESELECT</loadEvent></choice>
-    </event>
-    <event>
-      <text>已获得：LOOT_CULTIST_1（随机）。</text>
-      <weapon name="LOOT_CULTIST_1" />
-      <choice hidden="true"><text>返回</text><loadEvent>START_BEACON_PRESELECT</loadEvent></choice>
-    </event>
-    <event>
-      <text>已获得：LOOT_COALITION_1（随机）。</text>
-      <weapon name="LOOT_COALITION_1" />
-      <choice hidden="true"><text>返回</text><loadEvent>START_BEACON_PRESELECT</loadEvent></choice>
-    </event>
-    <event>
-      <text>已获得：LOOT_SLUG_1（随机）。</text>
-      <weapon name="LOOT_SLUG_1" />
-      <choice hidden="true"><text>返回</text><loadEvent>START_BEACON_PRESELECT</loadEvent></choice>
-    </event>
-    <event>
-      <text>已获得：LOOT_ROCK_1（随机）。</text>
-      <weapon name="LOOT_ROCK_1" />
-      <choice hidden="true"><text>返回</text><loadEvent>START_BEACON_PRESELECT</loadEvent></choice>
-    </event>
-  </loadEventList>
-</event> -->
