@@ -288,44 +288,44 @@
       </event>
     </choice>
 
-    <!-- Auto (Conservative Drone) -->
+        <!-- Auto (Conservative Drone) -->
     <choice req="ACH ACH_TRANS_AUTO">
-      <text>Auto (COMBAT_CONSERVATIVE_LASER)</text>
+      <text>Auto (Loot Drone)</text>
       <event>
-        <text>Received: COMBAT_CONSERVATIVE_LASER (added to storage).</text>
-        <drone name="COMBAT_CONSERVATIVE_LASER" />
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+        <text>Received: LIST_LOOT_AUTO (added to storage).</text>
+        <drone name="LIST_LOOT_AUTO" />
+        <choice hidden="true">
+          <text>Back</text>
+          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
+        </choice>
       </event>
     </choice>
 
-    <!-- Harmony (Combat or Defense Drone) -->
+        <!-- Harmony (Combat or Defense Drone) -->
     <choice req="ACH ACH_TRANS_HARMONY">
-      <text>Harmony (COMBAT_1)</text>
+      <text>Harmony (Loot Drone)</text>
       <event>
-        <text>Received: COMBAT_1 (added to storage).</text>
-        <drone name="COMBAT_1" />
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-    <choice req="ACH ACH_TRANS_HARMONY">
-      <text>Harmony (DEFENSE_1)</text>
-      <event>
-        <text>Received: DEFENSE_1 (added to storage).</text>
-        <drone name="DEFENSE_1" />
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+        <text>Received: LIST_LOOT_ENGI (added to storage).</text>
+        <drone name="LIST_LOOT_ENGI" />
+        <choice hidden="true">
+          <text>Back</text>
+          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
+        </choice>
       </event>
     </choice>
 
-    <!-- Separatist (Battle Drone) -->
+        <!-- Separatist (Battle Drone) -->
     <choice req="ACH ACH_TRANS_SEPARATIST">
-      <text>Separatist (BATTLE)</text>
+      <text>Separatist (Loot Drone)</text>
       <event>
-        <text>Received: BATTLE (added to storage).</text>
-        <drone name="BATTLE" />
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+        <text>Received: LIST_LOOT_SEPARATIST (added to storage).</text>
+        <drone name="LIST_LOOT_SEPARATIST" />
+        <choice hidden="true">
+          <text>Back</text>
+          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
+        </choice>
       </event>
-    </choice>
-    <choice>
+    </choice>    <choice>
       <text>Back to start menu</text>
       <event>
         <loadEvent>START_BEACON_PRESELECT</loadEvent>
@@ -334,5 +334,10 @@
   </event>
 
 </FTL>
+
+
+
+
+
 
 
