@@ -129,14 +129,15 @@
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
-    <choice req="ACH ACH_TRANS_ZOLTAN">
+    <!--似乎ZOLTAN_2在游戏里没有实现但是有id-->
+    <!-- <choice req="ACH ACH_TRANS_ZOLTAN">
       <text>Ministry (LOOT_ZOLTAN_2)</text>
       <event>
         <text>Received: LOOT_ZOLTAN_2 (added to storage).</text>
         <weapon name="LOOT_ZOLTAN_2" />
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
-    </choice>
+    </choice> -->
 
     <!-- Duskbringer -->
     <choice req="ACH ACH_TRANS_DUSKBRINGER">
