@@ -1,0 +1,33 @@
+<!--尽管 XML 规范了根标签只能有一个，但FTL用的是RapidXML库，宽松解析器会忽略这一条-->
+<!--FTL根标签是可选的-->
+<FTL>
+
+<mod:findName type="event" name="START_BEACON_PRESELECT"> <!--findName标签用于寻找带有name属性的标签-->
+	<!--在这里只能使用命令（mod开头的标签），其他标签都会报错-->
+	<!--mod-append:标签名 会在这里添加一个新标签（包含属性）-->
+	<mod-append:choice hidden="true">  <!--hidden属性为true时该选项的结果不会显示在选项上（如给于武器，给予废料）-->
+		<!--每一个choice标签都必须有一个text子标签，否则报错-->
+		<text>选择战利品。</text> <!--值直接写选项文本 XML 支持所有UTF-8字符-->
+		<!--choice标签的event子标签有两种用法，一是使用load属性，指填事件名，并写为自闭标签-->
+		<!--二是直接写事件数据，就和顶级的event标签一样，也可以写name属性（这个name属性是全局的，不能重复）-->
+		<event load="MOD_SELECT_LOOT"/>
+	</mod-append:choice>
+</mod:findName>
+
+<!--通常我们会以 mod名称缩写加下划线开头，id的命名规范是全部大写并且只能有字母数字和下划线组成-->
+<!--我没有测试过有如空格或中文等字符的影响-->
+<event name="MOD_SELECT_LOOT">
+	<text>选择战利品。</text>
+	<!--在这里就和普通事件一样了-->
+
+	<!--需要注意的是在这里我们不能用<event load="xx">-->
+	<!--因为ftl在加载时会把对应的load展开，在START_BEACON_PRESELECT里load了这个事件-->
+	<!--如果这里还load会造成死循环，引发崩溃-->
+	<choice hidden="true">
+		<text>返回</text>
+	<!--<loadEvent>事件名称</loadEvent> -->
+		<loadEvent>START_BEACON_PRESELECT</loadEvent> 
+	</choice>
+</event>
+
+</FTL>
