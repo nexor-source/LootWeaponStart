@@ -4,7 +4,7 @@
 
   <!-- Add an entry to the start preselect event -->
   <mod:findName type="event" name="START_BEACON_PRESELECT">
-    <mod-append:choice>
+    <mod-append:choice req="lw_loot_taken" lvl="0" max_lvl="0">
       <text>[Loot] Choose a loot weapon</text>
       <event load="LW_LOOT_WEAPON_SELECT"/>
     </mod-append:choice>
@@ -18,7 +18,7 @@
       <text>Loot: Rebel I (LOOT_REBEL_1)</text>
       <event>
         <text>Received: LOOT_REBEL_1 (added to storage).</text>
-        <weapon name="LOOT_REBEL_1" />
+        <weapon name="LOOT_REBEL_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
@@ -30,7 +30,7 @@
       <text>Loot: Cultist I (LOOT_CULTIST_1)</text>
       <event>
         <text>Received: LOOT_CULTIST_1 (added to storage).</text>
-        <weapon name="LOOT_CULTIST_1" />
+        <weapon name="LOOT_CULTIST_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
@@ -42,7 +42,7 @@
       <text>Loot: Coalition I (LOOT_COALITION_1)</text>
       <event>
         <text>Received: LOOT_COALITION_1 (added to storage).</text>
-        <weapon name="LOOT_COALITION_1" />
+        <weapon name="LOOT_COALITION_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
@@ -54,7 +54,7 @@
       <text>Loot: Slug I (LOOT_SLUG_1)</text>
       <event>
         <text>Received: LOOT_SLUG_1 (added to storage).</text>
-        <weapon name="LOOT_SLUG_1" />
+        <weapon name="LOOT_SLUG_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
@@ -66,7 +66,7 @@
       <text>Loot: Rock I (LOOT_ROCK_1)</text>
       <event>
         <text>Received: LOOT_ROCK_1 (added to storage).</text>
-        <weapon name="LOOT_ROCK_1" />
+        <weapon name="LOOT_ROCK_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
@@ -79,7 +79,7 @@
       <text>Union (LOOT_UNION_1)</text>
       <event>
         <text>Received: LOOT_UNION_1 (added to storage).</text>
-        <weapon name="LOOT_UNION_1" />
+        <weapon name="LOOT_UNION_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -87,7 +87,7 @@
       <text>Union (LOOT_UNION_2)</text>
       <event>
         <text>Received: LOOT_UNION_2 (added to storage).</text>
-        <weapon name="LOOT_UNION_2" />
+        <weapon name="LOOT_UNION_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -97,7 +97,7 @@
       <text>Militia (LOOT_MILITIA_1)</text>
       <event>
         <text>Received: LOOT_MILITIA_1 (added to storage).</text>
-        <weapon name="LOOT_MILITIA_1" />
+        <weapon name="LOOT_MILITIA_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -107,7 +107,7 @@
       <text>Federation (LOOT_FEDERATION_1)</text>
       <event>
         <text>Received: LOOT_FEDERATION_1 (added to storage).</text>
-        <weapon name="LOOT_FEDERATION_1" />
+        <weapon name="LOOT_FEDERATION_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -115,7 +115,7 @@
       <text>Federation (LOOT_FEDERATION_2)</text>
       <event>
         <text>Received: LOOT_FEDERATION_2 (added to storage).</text>
-        <weapon name="LOOT_FEDERATION_2" />
+        <weapon name="LOOT_FEDERATION_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -125,7 +125,7 @@
       <text>Ministry (LOOT_ZOLTAN_1)</text>
       <event>
         <text>Received: LOOT_ZOLTAN_1 (added to storage).</text>
-        <weapon name="LOOT_ZOLTAN_1" />
+        <weapon name="LOOT_ZOLTAN_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -134,7 +134,7 @@
       <text>Ministry (LOOT_ZOLTAN_2)</text>
       <event>
         <text>Received: LOOT_ZOLTAN_2 (added to storage).</text>
-        <weapon name="LOOT_ZOLTAN_2" />
+        <weapon name="LOOT_ZOLTAN_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice> -->
@@ -144,7 +144,7 @@
       <text>Duskbringer (LOOT_DUSKBRINGER_1)</text>
       <event>
         <text>Received: LOOT_DUSKBRINGER_1 (added to storage).</text>
-        <weapon name="LOOT_DUSKBRINGER_1" />
+        <weapon name="LOOT_DUSKBRINGER_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -154,7 +154,7 @@
       <text>Hive (LOOT_MANTIS_1)</text>
       <event>
         <text>Received: LOOT_MANTIS_1 (added to storage).</text>
-        <weapon name="LOOT_MANTIS_1" />
+        <weapon name="LOOT_MANTIS_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -162,7 +162,7 @@
       <text>Hive (LOOT_MANTIS_2)</text>
       <event>
         <text>Received: LOOT_MANTIS_2 (added to storage).</text>
-        <weapon name="LOOT_MANTIS_2" />
+        <weapon name="LOOT_MANTIS_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -172,7 +172,7 @@
       <text>Free Mantis (LOOT_FREEMANTIS_1)</text>
       <event>
         <text>Received: LOOT_FREEMANTIS_1 (added to storage).</text>
-        <weapon name="LOOT_FREEMANTIS_1" />
+        <weapon name="LOOT_FREEMANTIS_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -180,7 +180,7 @@
       <text>Free Mantis (LOOT_FREEMANTIS_2)</text>
       <event>
         <text>Received: LOOT_FREEMANTIS_2 (added to storage).</text>
-        <weapon name="LOOT_FREEMANTIS_2" />
+        <weapon name="LOOT_FREEMANTIS_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -190,7 +190,7 @@
       <text>Lost Sun (LOOT_LOSTSUN_1)</text>
       <event>
         <text>Received: LOOT_LOSTSUN_1 (added to storage).</text>
-        <weapon name="LOOT_LOSTSUN_1" />
+        <weapon name="LOOT_LOSTSUN_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -198,7 +198,7 @@
       <text>Lost Sun (LOOT_LOSTSUN_2)</text>
       <event>
         <text>Received: LOOT_LOSTSUN_2 (added to storage).</text>
-        <weapon name="LOOT_LOSTSUN_2" />
+        <weapon name="LOOT_LOSTSUN_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -208,7 +208,7 @@
       <text>Slug (LOOT_SLUG_2)</text>
       <event>
         <text>Received: LOOT_SLUG_2 (added to storage).</text>
-        <weapon name="LOOT_SLUG_2" />
+        <weapon name="LOOT_SLUG_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -218,7 +218,7 @@
       <text>Clan (LOOT_CLAN_1)</text>
       <event>
         <text>Received: LOOT_CLAN_1 (added to storage).</text>
-        <weapon name="LOOT_CLAN_1" />
+        <weapon name="LOOT_CLAN_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -228,7 +228,7 @@
       <text>Lanius (LOOT_LANIUS_1)</text>
       <event>
         <text>Received: LOOT_LANIUS_1 (added to storage).</text>
-        <weapon name="LOOT_LANIUS_1" />
+        <weapon name="LOOT_LANIUS_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -238,7 +238,7 @@
       <text>Dynasty (LOOT_DYNASTY_1)</text>
       <event>
         <text>Received: LOOT_DYNASTY_1 (added to storage).</text>
-        <weapon name="LOOT_DYNASTY_1" />
+        <weapon name="LOOT_DYNASTY_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -246,7 +246,7 @@
       <text>Dynasty (LOOT_DYNASTY_2)</text>
       <event>
         <text>Received: LOOT_DYNASTY_2 (added to storage).</text>
-        <weapon name="LOOT_DYNASTY_2" />
+        <weapon name="LOOT_DYNASTY_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -256,7 +256,7 @@
       <text>Shell (LOOT_SHELL_1)</text>
       <event>
         <text>Received: LOOT_SHELL_1 (added to storage).</text>
-        <weapon name="LOOT_SHELL_1" />
+        <weapon name="LOOT_SHELL_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -264,7 +264,7 @@
       <text>Shell (LOOT_SHELL_2)</text>
       <event>
         <text>Received: LOOT_SHELL_2 (added to storage).</text>
-        <weapon name="LOOT_SHELL_2" />
+        <weapon name="LOOT_SHELL_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -274,7 +274,7 @@
       <text>Leech (LOOT_LEECH_1)</text>
       <event>
         <text>Received: LOOT_LEECH_1 (added to storage).</text>
-        <weapon name="LOOT_LEECH_1" />
+        <weapon name="LOOT_LEECH_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -284,7 +284,7 @@
       <text>Knight (LOOT_KNIGHT_1)</text>
       <event>
         <text>Received: LOOT_KNIGHT_1 (added to storage).</text>
-        <weapon name="LOOT_KNIGHT_1" />
+        <weapon name="LOOT_KNIGHT_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
@@ -294,7 +294,7 @@
       <text>Auto (Loot Drone)</text>
       <event>
         <text>Received: LIST_LOOT_AUTO (added to storage).</text>
-        <drone name="LIST_LOOT_AUTO" />
+        <drone name="LIST_LOOT_AUTO" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
@@ -307,7 +307,7 @@
       <text>Harmony (Loot Drone)</text>
       <event>
         <text>Received: LIST_LOOT_ENGI (added to storage).</text>
-        <drone name="LIST_LOOT_ENGI" />
+        <drone name="LIST_LOOT_ENGI" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
@@ -320,7 +320,7 @@
       <text>Separatist (Loot Drone)</text>
       <event>
         <text>Received: LIST_LOOT_SEPARATIST (added to storage).</text>
-        <drone name="LIST_LOOT_SEPARATIST" />
+        <drone name="LIST_LOOT_SEPARATIST" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
@@ -333,7 +333,7 @@
       <text>Estate (Loot Drone)</text>
       <event>
         <text>Received: LIST_LOOT_ESTATE (added to storage).</text>
-        <drone name="LIST_LOOT_ESTATE" />
+        <drone name="LIST_LOOT_ESTATE" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
@@ -346,7 +346,7 @@
       <text>Augmented (Loot Drone)</text>
       <event>
         <text>Received: LIST_LOOT_AUG (added to storage).</text>
-        <drone name="LIST_LOOT_AUG" />
+        <drone name="LIST_LOOT_AUG" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
@@ -363,3 +363,4 @@
   </event>
 
 </FTL>
+
