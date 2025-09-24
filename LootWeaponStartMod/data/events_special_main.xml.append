@@ -325,7 +325,35 @@
           <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
         </choice>
       </event>
-    </choice>    <choice>
+    </choice>
+
+    <!-- Estate (Wentworth Innovation) Loot Drone -->
+    <choice req="ACH ACH_TRANS_ESTATE">
+      <text>Estate (Loot Drone)</text>
+      <event>
+        <text>Received: LIST_LOOT_ESTATE (added to storage).</text>
+        <drone name="LIST_LOOT_ESTATE" />
+        <choice hidden="true">
+          <text>Back</text>
+          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
+        </choice>
+      </event>
+    </choice>
+
+    <!-- Augmented (Ancient Recovery Site) Loot Drone -->
+    <choice req="ACH ACH_TRANS_AUGMENTED">
+      <text>Augmented (Loot Drone)</text>
+      <event>
+        <text>Received: LIST_LOOT_AUG (added to storage).</text>
+        <drone name="LIST_LOOT_AUG" />
+        <choice hidden="true">
+          <text>Back</text>
+          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
+        </choice>
+      </event>
+    </choice>
+
+    <choice>
       <text>Back to start menu</text>
       <event>
         <loadEvent>START_BEACON_PRESELECT</loadEvent>
@@ -334,10 +362,3 @@
   </event>
 
 </FTL>
-
-
-
-
-
-
-
