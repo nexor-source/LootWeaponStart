@@ -15,9 +15,9 @@
     <text>Choose one loot weapon to add to storage.</text>
 
     <choice req="ACH ACH_TRANS_REBEL">
-      <text>Loot: Rebel I (LOOT_REBEL_1)</text>
+      <text>Loot: Rebel I</text>
       <event>
-        <text>Received: LOOT_REBEL_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_REBEL_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
@@ -27,9 +27,9 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_CULTIST">
-      <text>Loot: Cultist I (LOOT_CULTIST_1)</text>
+      <text>Loot: Cultist I</text>
       <event>
-        <text>Received: LOOT_CULTIST_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_CULTIST_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
@@ -39,9 +39,9 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_COALITION">
-      <text>Loot: Coalition I (LOOT_COALITION_1)</text>
+      <text>Loot: Coalition I</text>
       <event>
-        <text>Received: LOOT_COALITION_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_COALITION_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
@@ -51,9 +51,9 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_SLUG">
-      <text>Loot: Slug I (LOOT_SLUG_1)</text>
+      <text>Loot: Slug I</text>
       <event>
-        <text>Received: LOOT_SLUG_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_SLUG_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
@@ -63,9 +63,9 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_ROCK">
-      <text>Loot: Rock I (LOOT_ROCK_1)</text>
+      <text>Loot: Rock I</text>
       <event>
-        <text>Received: LOOT_ROCK_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_ROCK_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
@@ -76,17 +76,17 @@
 
         <!-- Union -->
     <choice req="ACH ACH_TRANS_UNION">
-      <text>Union (LOOT_UNION_1)</text>
+      <text>Union</text>
       <event>
-        <text>Received: LOOT_UNION_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_UNION_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_UNION">
-      <text>Union (LOOT_UNION_2)</text>
+      <text>Union</text>
       <event>
-        <text>Received: LOOT_UNION_2 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_UNION_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -94,9 +94,9 @@
 
     <!-- Militia -->
     <choice req="ACH ACH_TRANS_MILITIA">
-      <text>Militia (LOOT_MILITIA_1)</text>
+      <text>Militia</text>
       <event>
-        <text>Received: LOOT_MILITIA_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_MILITIA_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -104,17 +104,17 @@
 
     <!-- Federation -->
     <choice req="ACH ACH_TRANS_FEDERATION">
-      <text>Federation (LOOT_FEDERATION_1)</text>
+      <text>Federation</text>
       <event>
-        <text>Received: LOOT_FEDERATION_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_FEDERATION_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_FEDERATION">
-      <text>Federation (LOOT_FEDERATION_2)</text>
+      <text>Federation</text>
       <event>
-        <text>Received: LOOT_FEDERATION_2 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_FEDERATION_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -122,18 +122,18 @@
 
     <!-- Zoltan / Ministry -->
     <choice req="ACH ACH_TRANS_ZOLTAN">
-      <text>Ministry (LOOT_ZOLTAN_1)</text>
+      <text>Ministry</text>
       <event>
-        <text>Received: LOOT_ZOLTAN_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_ZOLTAN_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
     <!--似乎ZOLTAN_2在游戏里没有实现但是有id-->
     <!-- <choice req="ACH ACH_TRANS_ZOLTAN">
-      <text>Ministry (LOOT_ZOLTAN_2)</text>
+      <text>Ministry</text>
       <event>
-        <text>Received: LOOT_ZOLTAN_2 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_ZOLTAN_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -141,9 +141,9 @@
 
     <!-- Duskbringer -->
     <choice req="ACH ACH_TRANS_DUSKBRINGER">
-      <text>Duskbringer (LOOT_DUSKBRINGER_1)</text>
+      <text>Duskbringer</text>
       <event>
-        <text>Received: LOOT_DUSKBRINGER_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_DUSKBRINGER_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -151,17 +151,17 @@
 
     <!-- Mantis / Hive -->
     <choice req="ACH ACH_TRANS_MANTIS">
-      <text>Hive (LOOT_MANTIS_1)</text>
+      <text>Hive</text>
       <event>
-        <text>Received: LOOT_MANTIS_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_MANTIS_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_MANTIS">
-      <text>Hive (LOOT_MANTIS_2)</text>
+      <text>Hive</text>
       <event>
-        <text>Received: LOOT_MANTIS_2 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_MANTIS_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -169,17 +169,17 @@
 
     <!-- Free Mantis -->
     <choice req="ACH ACH_TRANS_FREEMANTIS">
-      <text>Free Mantis (LOOT_FREEMANTIS_1)</text>
+      <text>Free Mantis</text>
       <event>
-        <text>Received: LOOT_FREEMANTIS_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_FREEMANTIS_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_FREEMANTIS">
-      <text>Free Mantis (LOOT_FREEMANTIS_2)</text>
+      <text>Free Mantis</text>
       <event>
-        <text>Received: LOOT_FREEMANTIS_2 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_FREEMANTIS_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -187,17 +187,17 @@
 
     <!-- Lost Sun -->
     <choice req="ACH ACH_TRANS_LOSTSUN">
-      <text>Lost Sun (LOOT_LOSTSUN_1)</text>
+      <text>Lost Sun</text>
       <event>
-        <text>Received: LOOT_LOSTSUN_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_LOSTSUN_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_LOSTSUN">
-      <text>Lost Sun (LOOT_LOSTSUN_2)</text>
+      <text>Lost Sun</text>
       <event>
-        <text>Received: LOOT_LOSTSUN_2 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_LOSTSUN_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -205,9 +205,9 @@
 
     <!-- Slug (additional) -->
     <choice req="ACH ACH_TRANS_SLUG">
-      <text>Slug (LOOT_SLUG_2)</text>
+      <text>Slug</text>
       <event>
-        <text>Received: LOOT_SLUG_2 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_SLUG_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -215,9 +215,9 @@
 
     <!-- Clan (Guild) -->
     <choice req="ACH ACH_TRANS_CLAN">
-      <text>Clan (LOOT_CLAN_1)</text>
+      <text>Clan</text>
       <event>
-        <text>Received: LOOT_CLAN_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_CLAN_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -225,9 +225,9 @@
 
     <!-- Lanius -->
     <choice req="ACH ACH_TRANS_LANIUS">
-      <text>Lanius (LOOT_LANIUS_1)</text>
+      <text>Lanius</text>
       <event>
-        <text>Received: LOOT_LANIUS_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_LANIUS_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -235,17 +235,17 @@
 
     <!-- Dynasty -->
     <choice req="ACH ACH_TRANS_DYNASTY">
-      <text>Dynasty (LOOT_DYNASTY_1)</text>
+      <text>Dynasty</text>
       <event>
-        <text>Received: LOOT_DYNASTY_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_DYNASTY_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_DYNASTY">
-      <text>Dynasty (LOOT_DYNASTY_2)</text>
+      <text>Dynasty</text>
       <event>
-        <text>Received: LOOT_DYNASTY_2 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_DYNASTY_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -253,17 +253,17 @@
 
     <!-- Shell -->
     <choice req="ACH ACH_TRANS_SHELL">
-      <text>Shell (LOOT_SHELL_1)</text>
+      <text>Shell</text>
       <event>
-        <text>Received: LOOT_SHELL_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_SHELL_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_SHELL">
-      <text>Shell (LOOT_SHELL_2)</text>
+      <text>Shell</text>
       <event>
-        <text>Received: LOOT_SHELL_2 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_SHELL_2" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -271,9 +271,9 @@
 
     <!-- Leech -->
     <choice req="ACH ACH_TRANS_LEECH">
-      <text>Leech (LOOT_LEECH_1)</text>
+      <text>Leech</text>
       <event>
-        <text>Received: LOOT_LEECH_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_LEECH_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -281,9 +281,9 @@
 
     <!-- Cultist (additional already exists) -->
     <choice req="ACH ACH_TRANS_KNIGHT">
-      <text>Knight (LOOT_KNIGHT_1)</text>
+      <text>Knight</text>
       <event>
-        <text>Received: LOOT_KNIGHT_1 (added to storage).</text>
+        <text>Loot added to storage.</text>
         <weapon name="LOOT_KNIGHT_1" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
       </event>
@@ -293,7 +293,7 @@
     <choice req="ACH ACH_TRANS_AUTO">
       <text>Auto (Loot Drone)</text>
       <event>
-        <text>Received: LIST_LOOT_AUTO (added to storage).</text>
+        <text>Loot drone added to storage.</text>
         <drone name="LIST_LOOT_AUTO" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
@@ -306,7 +306,7 @@
     <choice req="ACH ACH_TRANS_HARMONY">
       <text>Harmony (Loot Drone)</text>
       <event>
-        <text>Received: LIST_LOOT_ENGI (added to storage).</text>
+        <text>Loot drone added to storage.</text>
         <drone name="LIST_LOOT_ENGI" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
@@ -319,7 +319,7 @@
     <choice req="ACH ACH_TRANS_SEPARATIST">
       <text>Separatist (Loot Drone)</text>
       <event>
-        <text>Received: LIST_LOOT_SEPARATIST (added to storage).</text>
+        <text>Loot drone added to storage.</text>
         <drone name="LIST_LOOT_SEPARATIST" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
@@ -332,7 +332,7 @@
     <choice req="ACH ACH_TRANS_ESTATE">
       <text>Estate (Loot Drone)</text>
       <event>
-        <text>Received: LIST_LOOT_ESTATE (added to storage).</text>
+        <text>Loot drone added to storage.</text>
         <drone name="LIST_LOOT_ESTATE" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
@@ -345,7 +345,7 @@
     <choice req="ACH ACH_TRANS_AUGMENTED">
       <text>Augmented (Loot Drone)</text>
       <event>
-        <text>Received: LIST_LOOT_AUG (added to storage).</text>
+        <text>Loot drone added to storage.</text>
         <drone name="LIST_LOOT_AUG" />`r`n        <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true">
           <text>Back</text>
@@ -363,4 +363,5 @@
   </event>
 
 </FTL>
+
 
