@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <title>Loot Weapon Mine!</title>
+  <threadUrl>
+    <![CDATA[ https://github.com/nexor-source/LootWeaponStart ]]>
+  </threadUrl>
+  <author>Codex</author>
+  <version>1.0.0</version>
+  <description>
+    <![CDATA[
+Buy exactly one loot item (weapon or drone) per run from the Storage menu.
+
+- Accessible from the Storage button any time it's available
+- Costs scrap equal to the blueprint's listed price (no freebies)
+- After purchase, the locker seals and the option disables for the run
+
+Requirements & load order:
+- Requires FTL: Multiverse + Hyperspace
+- Patch after Multiverse; compatible with Judge Boon Selector
+]]>
+  </description>
+</metadata>

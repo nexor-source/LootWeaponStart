@@ -2,18 +2,18 @@
   <!-- Entry at start-of-run preparations -->
   <mod:findName type="event" name="STORAGE_CHECK_BUTTON">
     <mod-append:choice req="lw_loot_taken" lvl="0" max_lvl="0">
-      <text>[LootWeaponStart] Access Transport Caches</text>
+      <text>[Loot Weapon Mine!] Storage Purchases</text>
       <event load="LW_LOOT_WEAPON_SELECT"/>
     </mod-append:choice>
   </mod:findName>
 
   <!-- Selection event -->
   <event name="LW_LOOT_WEAPON_SELECT">
-    <text>Quartermaster lays out contraband from recent ops. Choose one piece to outfit your run.</text>
+    <text>Down in the ship's storage, the quartermaster unlocks a crate of seized contraband. Due to rationing, regulations allow exactly one purchase before departure. Your scrap readout shows the price of each label; after buying, the locker is sealed for this run.</text>
 
     <!-- Singles -->
     <choice req="ACH ACH_TRANS_REBEL">
-      <text>Rebel Spoil - 75 scrap</text>
+      <text>Rebel Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -26,7 +26,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_CULTIST">
-      <text>Cultist Spoil - 65 scrap</text>
+      <text>Cultist Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -39,7 +39,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_COALITION">
-      <text>Coalition Spoil - 60 scrap</text>
+      <text>Coalition Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -52,7 +52,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_ROCK">
-      <text>Rock Spoil - 60 scrap</text>
+      <text>Rock Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -65,7 +65,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_MILITIA">
-      <text>Militia Spoil - 70 scrap</text>
+      <text>Militia Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -78,7 +78,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_DUSKBRINGER">
-      <text>Duskbringer Spoil - 50 scrap</text>
+      <text>Duskbringer Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -91,7 +91,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_CLAN">
-      <text>Guild Spoil - 50 scrap</text>
+      <text>Guild Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -104,7 +104,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_LANIUS">
-      <text>Lanius Spoil - 80 scrap</text>
+      <text>Lanius Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -117,7 +117,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_LEECH">
-      <text>Leech Spoil - 65 scrap</text>
+      <text>Leech Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -130,7 +130,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_KNIGHT">
-      <text>Knight Spoil - 55 scrap</text>
+      <text>Knight Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -144,7 +144,7 @@
 
     <!-- Pairs (Alt variants) -->
     <choice req="ACH ACH_TRANS_UNION">
-      <text>Union Spoil - 50 scrap</text>
+      <text>Union Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -156,7 +156,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_UNION">
-      <text>Union Spoil II - 45 scrap</text>
+      <text>Union Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -169,7 +169,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_FEDERATION">
-      <text>Federation Spoil - 65 scrap</text>
+      <text>Federation Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -181,7 +181,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_FEDERATION">
-      <text>Federation Spoil II - 70 scrap</text>
+      <text>Federation Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -194,7 +194,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_ZOLTAN">
-      <text>Ministry Spoil - 60 scrap</text>
+      <text>Ministry Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -217,7 +217,7 @@
     </choice> -->
 
     <choice req="ACH ACH_TRANS_MANTIS">
-      <text>Mantis Spoil - 45 scrap</text>
+      <text>Mantis Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -229,7 +229,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_MANTIS">
-      <text>Mantis Spoil II - 55 scrap</text>
+      <text>Mantis Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -242,7 +242,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_FREEMANTIS">
-      <text>Free Mantis Spoil - 60 scrap</text>
+      <text>Free Mantis Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -254,7 +254,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_FREEMANTIS">
-      <text>Free Mantis Spoil II - 52 scrap</text>
+      <text>Free Mantis Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -267,7 +267,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_LOSTSUN">
-      <text>Lost Sun Spoil - 50 scrap</text>
+      <text>Lost Sun Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -279,7 +279,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_LOSTSUN">
-      <text>Lost Sun Spoil II - 70 scrap</text>
+      <text>Lost Sun Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -292,7 +292,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_SLUG">
-      <text>Slug Spoil - 50 scrap</text>
+      <text>Slug Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -304,7 +304,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_SLUG">
-      <text>Slug Spoil II - 50 scrap</text>
+      <text>Slug Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -317,7 +317,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_DYNASTY">
-      <text>Dynasty Spoil - 50 scrap</text>
+      <text>Dynasty Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -329,7 +329,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_DYNASTY">
-      <text>Dynasty Spoil II - 95 scrap</text>
+      <text>Dynasty Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -342,7 +342,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_SHELL">
-      <text>Shell Spoil - 75 scrap</text>
+      <text>Shell Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -354,7 +354,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_SHELL">
-      <text>Shell Spoil II - 90 scrap</text>
+      <text>Shell Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
@@ -368,7 +368,7 @@
 
     <!-- Drone Loot Transports -->
     <choice req="ACH ACH_TRANS_AUTO">
-      <text>Auto Drone Spoil - 55 scrap</text>
+      <text>Auto Drone Spoil</text>
       <event>
         <text>Loot drone added to storage.</text>
         <item_modify>
@@ -381,7 +381,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_HARMONY">
-      <text>Harmony Drone Spoil - 50 scrap</text>
+      <text>Harmony Drone Spoil</text>
       <event>
         <text>Loot drone added to storage.</text>
         <item_modify>
@@ -394,7 +394,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_SEPARATIST">
-      <text>Separatist Drone Spoil - 50 scrap</text>
+      <text>Separatist Drone Spoil</text>
       <event>
         <text>Loot drone added to storage.</text>
         <item_modify>
@@ -407,7 +407,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_ESTATE">
-      <text>Estate Drone Spoil - 60 scrap</text>
+      <text>Estate Drone Spoil</text>
       <event>
         <text>Loot drone added to storage.</text>
         <item_modify>
@@ -420,7 +420,7 @@
     </choice>
 
     <choice req="ACH ACH_TRANS_AUGMENTED">
-      <text>Augmented Drone Spoil - 50 scrap</text>
+      <text>Augmented Drone Spoil</text>
       <event>
         <text>Loot drone added to storage.</text>
         <item_modify>
