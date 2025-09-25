@@ -123,7 +123,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_UNION">
-      <text>Union Spoil (Alt)</text>
+      <text>Union Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_UNION_2" />
@@ -142,7 +142,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_FEDERATION">
-      <text>Federation Spoil (Alt)</text>
+      <text>Federation Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_FEDERATION_2" />
@@ -160,15 +160,16 @@
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
-    <choice req="ACH ACH_TRANS_ZOLTAN">
-      <text>Ministry Spoil (Alt)</text>
+    <!-- 游戏虽然有ZOLTAN2的ID但是没有对应的武器资源 -->
+    <!-- <choice req="ACH ACH_TRANS_ZOLTAN">
+      <text>Ministry Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_ZOLTAN_2" />
         <variable name="lw_loot_taken" op="set" val="1"/>
         <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
-    </choice>
+    </choice> -->
 
     <choice req="ACH ACH_TRANS_MANTIS">
       <text>Mantis Spoil</text>
@@ -180,7 +181,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_MANTIS">
-      <text>Mantis Spoil (Alt)</text>
+      <text>Mantis Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_MANTIS_2" />
@@ -199,7 +200,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_FREEMANTIS">
-      <text>Free Mantis Spoil (Alt)</text>
+      <text>Free Mantis Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_FREEMANTIS_2" />
@@ -218,7 +219,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_LOSTSUN">
-      <text>Lost Sun Spoil (Alt)</text>
+      <text>Lost Sun Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_LOSTSUN_2" />
@@ -237,7 +238,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_SLUG">
-      <text>Slug Spoil (Alt)</text>
+      <text>Slug Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_SLUG_2" />
@@ -256,7 +257,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_DYNASTY">
-      <text>Dynasty Spoil (Alt)</text>
+      <text>Dynasty Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_DYNASTY_2" />
@@ -275,7 +276,7 @@
       </event>
     </choice>
     <choice req="ACH ACH_TRANS_SHELL">
-      <text>Shell Spoil (Alt)</text>
+      <text>Shell Spoil II</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_SHELL_2" />
@@ -341,5 +342,6 @@
     </choice>
   </event>
 </FTL>
+
 
 
