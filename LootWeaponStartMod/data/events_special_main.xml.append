@@ -1,400 +1,345 @@
-<FTL>
-  <?xml version="1.0" encoding="UTF-8"?>
-  <!-- Loot Weapon Start: mount loot selection to START_BEACON_PRESELECT (ASCII only texts) -->
-
-  <!-- Add an entry to the start preselect event -->
-  <mod:findName type="event" name="START_BEACON_PRESELECT">
+﻿<FTL>
+  <!-- Entry at start-of-run preparations -->
+  <mod:findName type="event" name="START_BEACON_PREP">
     <mod-append:choice req="lw_loot_taken" lvl="0" max_lvl="0">
-      <text>[Loot] Choose a loot weapon</text>
+      <text>[LootWeaponStart] Access Transport Caches</text>
       <event load="LW_LOOT_WEAPON_SELECT"/>
     </mod-append:choice>
   </mod:findName>
 
-  <!-- Main selection event -->
+  <!-- Selection event -->
   <event name="LW_LOOT_WEAPON_SELECT">
-    <text>Choose one loot weapon to add to storage.</text>
+    <text>Quartermaster lays out contraband from recent ops. Choose one piece to outfit your run.</text>
 
+    <!-- Singles -->
     <choice req="ACH ACH_TRANS_REBEL">
-      <text>Loot: Rebel I</text>
+      <text>Rebel Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_REBEL_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true">
-          <text>Back</text>
-          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
-        </choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
     <choice req="ACH ACH_TRANS_CULTIST">
-      <text>Loot: Cultist I</text>
+      <text>Cultist Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_CULTIST_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true">
-          <text>Back</text>
-          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
-        </choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
     <choice req="ACH ACH_TRANS_COALITION">
-      <text>Loot: Coalition I</text>
+      <text>Coalition Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_COALITION_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true">
-          <text>Back</text>
-          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
-        </choice>
-      </event>
-    </choice>
-
-    <choice req="ACH ACH_TRANS_SLUG">
-      <text>Loot: Slug I</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_SLUG_1" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true">
-          <text>Back</text>
-          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
-        </choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
     <choice req="ACH ACH_TRANS_ROCK">
-      <text>Loot: Rock I</text>
+      <text>Rock Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_ROCK_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true">
-          <text>Back</text>
-          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
-        </choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-        <!-- Union -->
-    <choice req="ACH ACH_TRANS_UNION">
-      <text>Union</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_UNION_1" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-    <choice req="ACH ACH_TRANS_UNION">
-      <text>Union</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_UNION_2" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-
-    <!-- Militia -->
     <choice req="ACH ACH_TRANS_MILITIA">
-      <text>Militia</text>
+      <text>Militia Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_MILITIA_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-    <!-- Federation -->
-    <choice req="ACH ACH_TRANS_FEDERATION">
-      <text>Federation</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_FEDERATION_1" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-    <choice req="ACH ACH_TRANS_FEDERATION">
-      <text>Federation</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_FEDERATION_2" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-
-    <!-- Zoltan / Ministry -->
-    <choice req="ACH ACH_TRANS_ZOLTAN">
-      <text>Ministry</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_ZOLTAN_1" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-    <!--似乎ZOLTAN_2在游戏里没有实现但是有id-->
-    <!-- <choice req="ACH ACH_TRANS_ZOLTAN">
-      <text>Ministry</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_ZOLTAN_2" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice> -->
-
-    <!-- Duskbringer -->
     <choice req="ACH ACH_TRANS_DUSKBRINGER">
-      <text>Duskbringer</text>
+      <text>Duskbringer Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_DUSKBRINGER_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-    <!-- Mantis / Hive -->
-    <choice req="ACH ACH_TRANS_MANTIS">
-      <text>Hive</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_MANTIS_1" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-    <choice req="ACH ACH_TRANS_MANTIS">
-      <text>Hive</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_MANTIS_2" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-
-    <!-- Free Mantis -->
-    <choice req="ACH ACH_TRANS_FREEMANTIS">
-      <text>Free Mantis</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_FREEMANTIS_1" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-    <choice req="ACH ACH_TRANS_FREEMANTIS">
-      <text>Free Mantis</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_FREEMANTIS_2" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-
-    <!-- Lost Sun -->
-    <choice req="ACH ACH_TRANS_LOSTSUN">
-      <text>Lost Sun</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_LOSTSUN_1" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-    <choice req="ACH ACH_TRANS_LOSTSUN">
-      <text>Lost Sun</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_LOSTSUN_2" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-
-    <!-- Slug (additional) -->
-    <choice req="ACH ACH_TRANS_SLUG">
-      <text>Slug</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_SLUG_2" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-
-    <!-- Clan (Guild) -->
     <choice req="ACH ACH_TRANS_CLAN">
-      <text>Clan</text>
+      <text>Guild Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_CLAN_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-    <!-- Lanius -->
     <choice req="ACH ACH_TRANS_LANIUS">
-      <text>Lanius</text>
+      <text>Lanius Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_LANIUS_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-    <!-- Dynasty -->
-    <choice req="ACH ACH_TRANS_DYNASTY">
-      <text>Dynasty</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_DYNASTY_1" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-    <choice req="ACH ACH_TRANS_DYNASTY">
-      <text>Dynasty</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_DYNASTY_2" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-
-    <!-- Shell -->
-    <choice req="ACH ACH_TRANS_SHELL">
-      <text>Shell</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_SHELL_1" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-    <choice req="ACH ACH_TRANS_SHELL">
-      <text>Shell</text>
-      <event>
-        <text>Loot added to storage.</text>
-        <weapon name="LOOT_SHELL_2" />
-        <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
-      </event>
-    </choice>
-
-    <!-- Leech -->
     <choice req="ACH ACH_TRANS_LEECH">
-      <text>Leech</text>
+      <text>Leech Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_LEECH_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-    <!-- Cultist (additional already exists) -->
     <choice req="ACH ACH_TRANS_KNIGHT">
-      <text>Knight</text>
+      <text>Knight Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <weapon name="LOOT_KNIGHT_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PRESELECT</loadEvent></event></choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-        <!-- Auto (Conservative Drone) -->
+    <!-- Pairs (Alt variants) -->
+    <choice req="ACH ACH_TRANS_UNION">
+      <text>Union Spoil</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_UNION_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_UNION">
+      <text>Union Spoil (Alt)</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_UNION_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_FEDERATION">
+      <text>Federation Spoil</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_FEDERATION_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_FEDERATION">
+      <text>Federation Spoil (Alt)</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_FEDERATION_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_ZOLTAN">
+      <text>Ministry Spoil</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_ZOLTAN_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_ZOLTAN">
+      <text>Ministry Spoil (Alt)</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_ZOLTAN_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_MANTIS">
+      <text>Mantis Spoil</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_MANTIS_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_MANTIS">
+      <text>Mantis Spoil (Alt)</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_MANTIS_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_FREEMANTIS">
+      <text>Free Mantis Spoil</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_FREEMANTIS_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_FREEMANTIS">
+      <text>Free Mantis Spoil (Alt)</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_FREEMANTIS_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_LOSTSUN">
+      <text>Lost Sun Spoil</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_LOSTSUN_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_LOSTSUN">
+      <text>Lost Sun Spoil (Alt)</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_LOSTSUN_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_SLUG">
+      <text>Slug Spoil</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_SLUG_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_SLUG">
+      <text>Slug Spoil (Alt)</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_SLUG_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_DYNASTY">
+      <text>Dynasty Spoil</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_DYNASTY_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_DYNASTY">
+      <text>Dynasty Spoil (Alt)</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_DYNASTY_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_SHELL">
+      <text>Shell Spoil</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_SHELL_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_SHELL">
+      <text>Shell Spoil (Alt)</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_SHELL_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Drone Loot Transports -->
     <choice req="ACH ACH_TRANS_AUTO">
-      <text>Auto (Loot Drone)</text>
+      <text>Auto Drone Spoil</text>
       <event>
         <text>Loot drone added to storage.</text>
         <drone name="LIST_LOOT_AUTO" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true">
-          <text>Back</text>
-          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
-        </choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-        <!-- Harmony (Combat or Defense Drone) -->
     <choice req="ACH ACH_TRANS_HARMONY">
-      <text>Harmony (Loot Drone)</text>
+      <text>Harmony Drone Spoil</text>
       <event>
         <text>Loot drone added to storage.</text>
         <drone name="LIST_LOOT_ENGI" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true">
-          <text>Back</text>
-          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
-        </choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-        <!-- Separatist (Battle Drone) -->
     <choice req="ACH ACH_TRANS_SEPARATIST">
-      <text>Separatist (Loot Drone)</text>
+      <text>Separatist Drone Spoil</text>
       <event>
         <text>Loot drone added to storage.</text>
         <drone name="LIST_LOOT_SEPARATIST" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true">
-          <text>Back</text>
-          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
-        </choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-    <!-- Estate (Wentworth Innovation) Loot Drone -->
     <choice req="ACH ACH_TRANS_ESTATE">
-      <text>Estate (Loot Drone)</text>
+      <text>Estate Drone Spoil</text>
       <event>
         <text>Loot drone added to storage.</text>
         <drone name="LIST_LOOT_ESTATE" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true">
-          <text>Back</text>
-          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
-        </choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
-    <!-- Augmented (Ancient Recovery Site) Loot Drone -->
     <choice req="ACH ACH_TRANS_AUGMENTED">
-      <text>Augmented (Loot Drone)</text>
+      <text>Augmented Drone Spoil</text>
       <event>
         <text>Loot drone added to storage.</text>
         <drone name="LIST_LOOT_AUG" />
         <variable name="lw_loot_taken" op="set" val="1"/>
-        <choice hidden="true">
-          <text>Back</text>
-          <event><loadEvent>START_BEACON_PRESELECT</loadEvent></event>
-        </choice>
+        <choice hidden="true"><text>Back</text><event><loadEvent>START_BEACON_PREP</loadEvent></event></choice>
       </event>
     </choice>
 
     <choice>
-      <text>Back to start menu</text>
-      <event>
-        <loadEvent>START_BEACON_PRESELECT</loadEvent>
-      </event>
+      <text>Return to preparations</text>
+      <event><loadEvent>START_BEACON_PREP</loadEvent></event>
     </choice>
   </event>
-
 </FTL>
 
 
