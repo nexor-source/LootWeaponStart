@@ -1,0 +1,440 @@
+﻿<FTL>
+  <!-- Entry at start-of-run preparations -->
+  <mod:findName type="event" name="STORAGE_CHECK_BUTTON">
+    <mod-append:choice req="lw_loot_taken" lvl="0" max_lvl="0">
+      <text>[LootWeaponStart] Access Transport Caches</text>
+      <event load="LW_LOOT_WEAPON_SELECT"/>
+    </mod-append:choice>
+  </mod:findName>
+
+  <!-- Selection event -->
+  <event name="LW_LOOT_WEAPON_SELECT">
+    <text>Quartermaster lays out contraband from recent ops. Choose one piece to outfit your run.</text>
+
+    <!-- Singles -->
+    <choice req="ACH ACH_TRANS_REBEL">
+      <text>Rebel Spoil - 75 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-75" max="-75"/>
+        </item_modify>
+        <weapon name="LOOT_REBEL_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_CULTIST">
+      <text>Cultist Spoil - 65 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-65" max="-65"/>
+        </item_modify>
+        <weapon name="LOOT_CULTIST_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_COALITION">
+      <text>Coalition Spoil - 60 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-60" max="-60"/>
+        </item_modify>
+        <weapon name="LOOT_COALITION_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_ROCK">
+      <text>Rock Spoil - 60 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-60" max="-60"/>
+        </item_modify>
+        <weapon name="LOOT_ROCK_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_MILITIA">
+      <text>Militia Spoil - 70 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-70" max="-70"/>
+        </item_modify>
+        <weapon name="LOOT_MILITIA_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_DUSKBRINGER">
+      <text>Duskbringer Spoil - 50 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <weapon name="LOOT_DUSKBRINGER_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_CLAN">
+      <text>Guild Spoil - 50 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <weapon name="LOOT_CLAN_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_LANIUS">
+      <text>Lanius Spoil - 80 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-80" max="-80"/>
+        </item_modify>
+        <weapon name="LOOT_LANIUS_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_LEECH">
+      <text>Leech Spoil - 65 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-65" max="-65"/>
+        </item_modify>
+        <weapon name="LOOT_LEECH_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_KNIGHT">
+      <text>Knight Spoil - 55 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-55" max="-55"/>
+        </item_modify>
+        <weapon name="LOOT_KNIGHT_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Pairs (Alt variants) -->
+    <choice req="ACH ACH_TRANS_UNION">
+      <text>Union Spoil - 50 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <weapon name="LOOT_UNION_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_UNION">
+      <text>Union Spoil II - 45 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-45" max="-45"/>
+        </item_modify>
+        <weapon name="LOOT_UNION_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_FEDERATION">
+      <text>Federation Spoil - 65 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-65" max="-65"/>
+        </item_modify>
+        <weapon name="LOOT_FEDERATION_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_FEDERATION">
+      <text>Federation Spoil II - 70 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-70" max="-70"/>
+        </item_modify>
+        <weapon name="LOOT_FEDERATION_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_ZOLTAN">
+      <text>Ministry Spoil - 60 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-60" max="-60"/>
+        </item_modify>
+        <weapon name="LOOT_ZOLTAN_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <!-- 游戏虽然有ZOLTAN2的ID但是没有对应的武器资源 -->
+    <!-- <choice req="ACH ACH_TRANS_ZOLTAN">
+      <text>Ministry Spoil II</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <weapon name="LOOT_ZOLTAN_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice> -->
+
+    <choice req="ACH ACH_TRANS_MANTIS">
+      <text>Mantis Spoil - 45 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-45" max="-45"/>
+        </item_modify>
+        <weapon name="LOOT_MANTIS_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_MANTIS">
+      <text>Mantis Spoil II - 55 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-55" max="-55"/>
+        </item_modify>
+        <weapon name="LOOT_MANTIS_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_FREEMANTIS">
+      <text>Free Mantis Spoil - 60 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-60" max="-60"/>
+        </item_modify>
+        <weapon name="LOOT_FREEMANTIS_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_FREEMANTIS">
+      <text>Free Mantis Spoil II - 52 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-52" max="-52"/>
+        </item_modify>
+        <weapon name="LOOT_FREEMANTIS_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_LOSTSUN">
+      <text>Lost Sun Spoil - 50 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <weapon name="LOOT_LOSTSUN_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_LOSTSUN">
+      <text>Lost Sun Spoil II - 70 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-70" max="-70"/>
+        </item_modify>
+        <weapon name="LOOT_LOSTSUN_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_SLUG">
+      <text>Slug Spoil - 50 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <weapon name="LOOT_SLUG_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_SLUG">
+      <text>Slug Spoil II - 50 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <weapon name="LOOT_SLUG_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_DYNASTY">
+      <text>Dynasty Spoil - 50 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <weapon name="LOOT_DYNASTY_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_DYNASTY">
+      <text>Dynasty Spoil II - 95 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-95" max="-95"/>
+        </item_modify>
+        <weapon name="LOOT_DYNASTY_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_SHELL">
+      <text>Shell Spoil - 75 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-75" max="-75"/>
+        </item_modify>
+        <weapon name="LOOT_SHELL_1" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_TRANS_SHELL">
+      <text>Shell Spoil II - 90 scrap</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-90" max="-90"/>
+        </item_modify>
+        <weapon name="LOOT_SHELL_2" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <!-- Drone Loot Transports -->
+    <choice req="ACH ACH_TRANS_AUTO">
+      <text>Auto Drone Spoil - 55 scrap</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-55" max="-55"/>
+        </item_modify>
+        <drone name="LIST_LOOT_AUTO" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_HARMONY">
+      <text>Harmony Drone Spoil - 50 scrap</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <drone name="LIST_LOOT_ENGI" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_SEPARATIST">
+      <text>Separatist Drone Spoil - 50 scrap</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <drone name="LIST_LOOT_SEPARATIST" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_ESTATE">
+      <text>Estate Drone Spoil - 60 scrap</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-60" max="-60"/>
+        </item_modify>
+        <drone name="LIST_LOOT_ESTATE" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice req="ACH ACH_TRANS_AUGMENTED">
+      <text>Augmented Drone Spoil - 50 scrap</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <drone name="LIST_LOOT_AUG" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+    <choice>
+      <text>Return to preparations</text>
+      <event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event>
+    </choice>
+  </event>
+</FTL>
