@@ -25,7 +25,7 @@
       </event>
     </choice>
 
-    <choice req="ACH ACH_TRANS_CULTIST">
+    <choice req="ACH ACH_TRANS_EMBER">
       <text>Cultist Spoil</text>
       <event>
         <text>Loot added to storage.</text>
