@@ -10,9 +10,9 @@
     <![CDATA[
 Buy exactly one loot item (weapon or drone) per run from the Storage menu.
 
-- Options are gated by your unlocked Transport achievements; only factions you\'ve completed appear
-- Accessible from the Storage button any time it\'s available
-- Costs scrap equal to the blueprint\'s listed price (no freebies)
+- Options are gated by your unlocked Transport achievements; only factions you've completed appear
+- Accessible from the Storage button any time it's available
+- Costs scrap equal to the blueprint's listed price (no freebies)
 - After purchase, the locker seals and the option disables for the run
 
 中文说明：
@@ -27,3 +27,4 @@ Requirements & load order:
 ]]>
   </description>
 </metadata>
+
