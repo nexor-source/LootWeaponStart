@@ -16,13 +16,852 @@
       <text>Return to preparations</text>
       <event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event>
     </choice>
-    
+
+    <choice>
+      <text>Transport Spoils</text>
+      <event load="LW_LOOT_TRANSPORT_SELECT"/>
+    </choice>
+
+    <choice>
+      <text>Renegade Spoils</text>
+      <event load="LW_LOOT_WEAPON_SELECT_REN"/>
+    </choice>
+
+    <choice>
+      <text>Chaos Renegade Spoils</text>
+      <event load="LW_LOOT_WEAPON_SELECT_REN_CHAOS"/>
+    </choice>
+
+  </event>
+
+  <event name="LW_LOOT_WEAPON_SELECT_REN">
+    <text>Renegade spoils captured from Multiverse adversaries sit on the shelf, each tagged by the crew that earned it. Pick one.</text>
+
+    <choice>
+      <text>Return to contraband list</text>
+      <event><loadEvent>LW_LOOT_WEAPON_SELECT</loadEvent></event>
+    </choice>
+
+    <choice req="ACH ACH_REN_KESTREL">
+      <text>Renegade Spoil - Kestrel</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-175" max="-175"/>
+        </item_modify>
+        <weapon name="LASER_LIGHT_CHARGEGUN" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_FED">
+      <text>Renegade Spoil - Federation</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-375" max="-375"/>
+        </item_modify>
+        <weapon name="MINELAUNCHER_GIANT" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_STEALTH">
+      <text>Renegade Spoil - Stealth</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-350" max="-350"/>
+        </item_modify>
+        <weapon name="BEAM_ADAPT_3" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ENGINEER">
+      <text>Renegade Spoil - Engineer</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-125" max="-125"/>
+        </item_modify>
+        <drone name="SURGEON_BATTLE" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_MVREBEL">
+      <text>Renegade Spoil - MV Rebel</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-175" max="-175"/>
+        </item_modify>
+        <weapon name="BEAM_QUICK" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_TUCO">
+      <text>Renegade Spoil - Tuco</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-225" max="-225"/>
+        </item_modify>
+        <weapon name="SLOTGUN" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ENGI">
+      <text>Renegade Spoil - Engi</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-250" max="-250"/>
+        </item_modify>
+        <drone name="DEFENSE_TRINITY_MISSILE" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SEPARATIST">
+      <text>Renegade Spoil - Separatist</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-125" max="-125"/>
+        </item_modify>
+        <drone name="YINYANG_BATTLE" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ZOLTAN">
+      <text>Renegade Spoil - Zoltan</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-125" max="-125"/>
+        </item_modify>
+        <weapon name="BEAM_BATTERY" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_MONK">
+      <text>Renegade Spoil - Monk</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-188" max="-188"/>
+        </item_modify>
+        <weapon name="ION_CHAIN_CHARGEGUN" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_DUSK">
+      <text>Renegade Spoil - Duskbringer</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-275" max="-275"/>
+        </item_modify>
+        <weapon name="SHOTGUN_STEEL" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_MANTIS">
+      <text>Renegade Spoil - Mantis</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-188" max="-188"/>
+        </item_modify>
+        <weapon name="BOMB_CONSERVRECYCLER" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_FREEMANTIS">
+      <text>Renegade Spoil - Free Mantis</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-225" max="-225"/>
+        </item_modify>
+        <weapon name="UNSPOOLER" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ROCK">
+      <text>Renegade Spoil - Rock</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <weapon name="MISSILES_OBSIDIAN" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_LOSTSUN">
+      <text>Renegade Spoil - Lost Sun</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <weapon name="FROST_CHARGEGUN" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_CRYSTAL">
+      <text>Renegade Spoil - Crystal</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-225" max="-225"/>
+        </item_modify>
+        <weapon name="CRYSTAL_BURST_FIRE" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SLUG">
+      <text>Renegade Spoil - Slug</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-250" max="-250"/>
+        </item_modify>
+        <weapon name="BIG_ION" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_CLAN">
+      <text>Renegade Spoil - Guild</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-188" max="-188"/>
+        </item_modify>
+        <weapon name="SNIPER" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ORCHID">
+      <text>Renegade Spoil - Orchid</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-238" max="-238"/>
+        </item_modify>
+        <weapon name="STRAWBERRY" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_VAMPWEED">
+      <text>Renegade Spoil - Vampweed</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <drone name="FOREMAN_BATTLE" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SHELL">
+      <text>Renegade Spoil - Shell</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-163" max="-163"/>
+        </item_modify>
+        <weapon name="SHELL_LAUNCHER" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_LEECH">
+      <text>Renegade Spoil - Leech</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <weapon name="BOMB_DRAIN" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_COALITION">
+      <text>Renegade Spoil - Coalition</text>
+      <event>
+        <text>Loot augment added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-275" max="-275"/>
+        </item_modify>
+        <augment name="ANTICOAL_AUG" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_LANIUS">
+      <text>Renegade Spoil - Lanius</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-250" max="-250"/>
+        </item_modify>
+        <weapon name="SHOTGUN_TOGGLE_FIRE" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_HORSE">
+      <text>Renegade Spoil - Horse</text>
+      <event>
+        <text>Loot crew recruited.</text>
+        <item_modify>
+          <item type="scrap" min="-75" max="-75"/>
+        </item_modify>
+        <crewMember amount="1" all_skills="1" class="pony_engi">3QU3STR14</crewMember>
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_MFK">
+      <text>Renegade Spoil - MFK</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <weapon name="BOMB_ELITE" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ANGEL">
+      <text>Renegade Spoil - Angel</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-225" max="-225"/>
+        </item_modify>
+        <weapon name="BEAM_HACK" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SPIDER">
+      <text>Renegade Spoil - Spider</text>
+      <event>
+        <text>Loot crew recruited.</text>
+        <item_modify>
+          <item type="scrap" min="-250" max="-250"/>
+        </item_modify>
+        <crewMember amount="1" all_skills="1" class="spider_venom">夏洛特</crewMember>
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_OSMIAN">
+      <text>Renegade Spoil - Osmian</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-125" max="-125"/>
+        </item_modify>
+        <drone name="HOLODRONE_BATTLE" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SALT">
+      <text>Renegade Spoil - Salt</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <drone name="SALT_MINER" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SYLVAN">
+      <text>Renegade Spoil - Sylvan</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-238" max="-238"/>
+        </item_modify>
+        <weapon name="GASTER_BLASTER" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_HEKTAR">
+      <text>Renegade Spoil - Hektar</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <weapon name="HEKTAR_MODULAR_CHARGE_REWARD" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_MORPH">
+      <text>Renegade Spoil - Morph</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-213" max="-213"/>
+        </item_modify>
+        <weapon name="SYMBIONT" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+  </event>
+
+  <event name="LW_LOOT_WEAPON_SELECT_REN_CHAOS">
+    <text>These chaos variants hum with unstable power. Regulations still limit you to one purchase.</text>
+
+    <choice>
+      <text>Return to contraband list</text>
+      <event><loadEvent>LW_LOOT_WEAPON_SELECT</loadEvent></event>
+    </choice>
+
+    <choice req="ACH ACH_REN_KESTREL">
+      <text>Chaos Spoil - Kestrel</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-280" max="-280"/>
+        </item_modify>
+        <weapon name="LASER_LIGHT_CHARGEGUN_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_FED">
+      <text>Chaos Spoil - Federation</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-600" max="-600"/>
+        </item_modify>
+        <weapon name="MINELAUNCHER_GIANT_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_STEALTH">
+      <text>Chaos Spoil - Stealth</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-560" max="-560"/>
+        </item_modify>
+        <weapon name="BEAM_ADAPT_3_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ENGINEER">
+      <text>Chaos Spoil - Engineer</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <drone name="SURGEON_BATTLE_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_MVREBEL">
+      <text>Chaos Spoil - MV Rebel</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-280" max="-280"/>
+        </item_modify>
+        <weapon name="BEAM_QUICK_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_TUCO">
+      <text>Chaos Spoil - Tuco</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-360" max="-360"/>
+        </item_modify>
+        <weapon name="SLOTGUN_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ENGI">
+      <text>Chaos Spoil - Engi</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-400" max="-400"/>
+        </item_modify>
+        <drone name="DEFENSE_TRINITY_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SEPARATIST">
+      <text>Chaos Spoil - Separatist</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <drone name="YINYANG_BATTLE_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ZOLTAN">
+      <text>Chaos Spoil - Zoltan</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <weapon name="BEAM_BATTERY_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_MONK">
+      <text>Chaos Spoil - Monk</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-300" max="-300"/>
+        </item_modify>
+        <weapon name="ION_CHAIN_CHARGEGUN_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_DUSK">
+      <text>Chaos Spoil - Duskbringer</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-440" max="-440"/>
+        </item_modify>
+        <weapon name="SHOTGUN_STEEL_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_MANTIS">
+      <text>Chaos Spoil - Mantis</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-300" max="-300"/>
+        </item_modify>
+        <weapon name="BOMB_CONSERVRECYCLER_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_FREEMANTIS">
+      <text>Chaos Spoil - Free Mantis</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-360" max="-360"/>
+        </item_modify>
+        <weapon name="UNSPOOLER_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ROCK">
+      <text>Chaos Spoil - Rock</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-320" max="-320"/>
+        </item_modify>
+        <weapon name="MISSILES_OBSIDIAN_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_LOSTSUN">
+      <text>Chaos Spoil - Lost Sun</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-320" max="-320"/>
+        </item_modify>
+        <weapon name="FROST_CHARGEGUN_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_CRYSTAL">
+      <text>Chaos Spoil - Crystal</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-360" max="-360"/>
+        </item_modify>
+        <weapon name="CRYSTAL_BURST_FIRE_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SLUG">
+      <text>Chaos Spoil - Slug</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-400" max="-400"/>
+        </item_modify>
+        <weapon name="BIG_ION_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_CLAN">
+      <text>Chaos Spoil - Guild</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-300" max="-300"/>
+        </item_modify>
+        <weapon name="SNIPER_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ORCHID">
+      <text>Chaos Spoil - Orchid</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-480" max="-480"/>
+        </item_modify>
+        <weapon name="STRAWBERRY_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_VAMPWEED">
+      <text>Chaos Spoil - Vampweed</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-320" max="-320"/>
+        </item_modify>
+        <drone name="FOREMAN_BATTLE_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SHELL">
+      <text>Chaos Spoil - Shell</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-260" max="-260"/>
+        </item_modify>
+        <weapon name="SHELL_LAUNCHER_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_LEECH">
+      <text>Chaos Spoil - Leech</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-320" max="-320"/>
+        </item_modify>
+        <weapon name="BOMB_DRAIN_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_COALITION">
+      <text>Chaos Spoil - Coalition</text>
+      <event>
+        <text>Loot augment added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-440" max="-440"/>
+        </item_modify>
+        <augment name="ANTICOAL_AUG_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_LANIUS">
+      <text>Chaos Spoil - Lanius</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-400" max="-400"/>
+        </item_modify>
+        <weapon name="SHOTGUN_TOGGLE_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_HORSE">
+      <text>Chaos Spoil - Horse</text>
+      <event>
+        <text>Loot crew recruited.</text>
+        <item_modify>
+          <item type="scrap" min="-120" max="-120"/>
+        </item_modify>
+        <crewMember amount="1" all_skills="1" class="pony_engi_chaos">3QU3STR14</crewMember>
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_MFK">
+      <text>Chaos Spoil - MFK</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-320" max="-320"/>
+        </item_modify>
+        <weapon name="BOMB_ELITE_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_ANGEL">
+      <text>Chaos Spoil - Angel</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-360" max="-360"/>
+        </item_modify>
+        <weapon name="BEAM_HACK_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SPIDER">
+      <text>Chaos Spoil - Spider</text>
+      <event>
+        <text>Loot crew recruited.</text>
+        <item_modify>
+          <item type="scrap" min="-400" max="-400"/>
+        </item_modify>
+        <crewMember amount="1" all_skills="1" class="spider_venom_chaos">夏洛特</crewMember>
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_OSMIAN">
+      <text>Chaos Spoil - Osmian</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-200" max="-200"/>
+        </item_modify>
+        <drone name="HOLODRONE_BATTLE_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SALT">
+      <text>Chaos Spoil - Salt</text>
+      <event>
+        <text>Loot drone added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-320" max="-320"/>
+        </item_modify>
+        <drone name="SALT_MINER_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_SYLVAN">
+      <text>Chaos Spoil - Sylvan</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-380" max="-380"/>
+        </item_modify>
+        <weapon name="GASTER_BLASTER_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_HEKTAR">
+      <text>Chaos Spoil - Hektar</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-320" max="-320"/>
+        </item_modify>
+        <weapon name="HEKTAR_MODULAR_CHARGE_CHAOS_REWARD" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+    <choice req="ACH ACH_REN_MORPH">
+      <text>Chaos Spoil - Morph</text>
+      <event>
+        <text>Loot added to storage.</text>
+        <item_modify>
+          <item type="scrap" min="-340" max="-340"/>
+        </item_modify>
+        <weapon name="SYMBIONT_CHAOS" />
+        <variable name="lw_loot_taken" op="set" val="1"/>
+        <choice hidden="true"><text>Back</text><event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event></choice>
+      </event>
+    </choice>
+
+  </event>
+
+  <event name="LW_LOOT_TRANSPORT_SELECT">
+    <text>The transport crates hold faction-specific spoils won by your crew. Regulations still allow only one purchase, so pick carefully.</text>
+
+    <choice>
+      <text>Return to contraband list</text>
+      <event><loadEvent>LW_LOOT_WEAPON_SELECT</loadEvent></event>
+    </choice>
+
     <choice req="ACH ACH_TRANS_REBEL">
       <text>Rebel Spoil</text>
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-75" max="-75"/>
+          <item type="scrap" min="-113" max="-113"/>
         </item_modify>
         <weapon name="LOOT_REBEL_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -35,7 +874,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-65" max="-65"/>
+          <item type="scrap" min="-98" max="-98"/>
         </item_modify>
         <weapon name="LOOT_CULTIST_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -48,7 +887,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-60" max="-60"/>
+          <item type="scrap" min="-90" max="-90"/>
         </item_modify>
         <weapon name="LOOT_COALITION_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -61,7 +900,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-60" max="-60"/>
+          <item type="scrap" min="-90" max="-90"/>
         </item_modify>
         <weapon name="LOOT_ROCK_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -74,7 +913,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-70" max="-70"/>
+          <item type="scrap" min="-105" max="-105"/>
         </item_modify>
         <weapon name="LOOT_MILITIA_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -87,7 +926,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <weapon name="LOOT_DUSKBRINGER_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -100,7 +939,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <weapon name="LOOT_CLAN_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -113,7 +952,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-80" max="-80"/>
+          <item type="scrap" min="-120" max="-120"/>
         </item_modify>
         <weapon name="LOOT_LANIUS_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -126,7 +965,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-65" max="-65"/>
+          <item type="scrap" min="-98" max="-98"/>
         </item_modify>
         <weapon name="LOOT_LEECH_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -139,7 +978,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-55" max="-55"/>
+          <item type="scrap" min="-83" max="-83"/>
         </item_modify>
         <weapon name="LOOT_KNIGHT_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -153,7 +992,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <weapon name="LOOT_UNION_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -165,7 +1004,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-45" max="-45"/>
+          <item type="scrap" min="-68" max="-68"/>
         </item_modify>
         <weapon name="LOOT_UNION_2" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -178,7 +1017,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-65" max="-65"/>
+          <item type="scrap" min="-98" max="-98"/>
         </item_modify>
         <weapon name="LOOT_FEDERATION_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -190,7 +1029,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-70" max="-70"/>
+          <item type="scrap" min="-105" max="-105"/>
         </item_modify>
         <weapon name="LOOT_FEDERATION_2" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -203,7 +1042,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-60" max="-60"/>
+          <item type="scrap" min="-90" max="-90"/>
         </item_modify>
         <weapon name="LOOT_ZOLTAN_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -226,7 +1065,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-45" max="-45"/>
+          <item type="scrap" min="-68" max="-68"/>
         </item_modify>
         <weapon name="LOOT_MANTIS_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -238,7 +1077,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-55" max="-55"/>
+          <item type="scrap" min="-83" max="-83"/>
         </item_modify>
         <weapon name="LOOT_MANTIS_2" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -251,7 +1090,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-60" max="-60"/>
+          <item type="scrap" min="-90" max="-90"/>
         </item_modify>
         <weapon name="LOOT_FREEMANTIS_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -263,7 +1102,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-52" max="-52"/>
+          <item type="scrap" min="-78" max="-78"/>
         </item_modify>
         <weapon name="LOOT_FREEMANTIS_2" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -276,7 +1115,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <weapon name="LOOT_LOSTSUN_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -288,7 +1127,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-70" max="-70"/>
+          <item type="scrap" min="-105" max="-105"/>
         </item_modify>
         <weapon name="LOOT_LOSTSUN_2" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -301,7 +1140,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <weapon name="LOOT_SLUG_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -313,7 +1152,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <weapon name="LOOT_SLUG_2" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -326,7 +1165,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <weapon name="LOOT_DYNASTY_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -338,7 +1177,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-95" max="-95"/>
+          <item type="scrap" min="-143" max="-143"/>
         </item_modify>
         <weapon name="LOOT_DYNASTY_2" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -351,7 +1190,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-75" max="-75"/>
+          <item type="scrap" min="-113" max="-113"/>
         </item_modify>
         <weapon name="LOOT_SHELL_1" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -363,7 +1202,7 @@
       <event>
         <text>Loot added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-90" max="-90"/>
+          <item type="scrap" min="-135" max="-135"/>
         </item_modify>
         <weapon name="LOOT_SHELL_2" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -377,7 +1216,7 @@
       <event>
         <text>Loot drone added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-55" max="-55"/>
+          <item type="scrap" min="-83" max="-83"/>
         </item_modify>
         <drone name="LIST_LOOT_AUTO" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -390,7 +1229,7 @@
       <event>
         <text>Loot drone added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <drone name="LIST_LOOT_ENGI" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -403,7 +1242,7 @@
       <event>
         <text>Loot drone added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <drone name="LIST_LOOT_SEPARATIST" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -416,7 +1255,7 @@
       <event>
         <text>Loot drone added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-60" max="-60"/>
+          <item type="scrap" min="-90" max="-90"/>
         </item_modify>
         <drone name="LIST_LOOT_ESTATE" />
         <variable name="lw_loot_taken" op="set" val="1"/>
@@ -429,7 +1268,7 @@
       <event>
         <text>Loot drone added to storage.</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <drone name="LIST_LOOT_AUG" />
         <variable name="lw_loot_taken" op="set" val="1"/>

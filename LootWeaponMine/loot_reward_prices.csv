@@ -1,0 +1,99 @@
+category,choice_text,reward_type,reward_id,crew_attrs,crew_name,original_cost,new_cost
+Renegade,Renegade Spoil - Kestrel,weapon,LASER_LIGHT_CHARGEGUN,,,70,175
+Renegade,Renegade Spoil - Federation,weapon,MINELAUNCHER_GIANT,,,150,375
+Renegade,Renegade Spoil - Stealth,weapon,BEAM_ADAPT_3,,,140,350
+Renegade,Renegade Spoil - Engineer,drone,SURGEON_BATTLE,,,50,125
+Renegade,Renegade Spoil - MV Rebel,weapon,BEAM_QUICK,,,70,175
+Renegade,Renegade Spoil - Tuco,weapon,SLOTGUN,,,90,225
+Renegade,Renegade Spoil - Engi,drone,DEFENSE_TRINITY_MISSILE,,,100,250
+Renegade,Renegade Spoil - Separatist,drone,YINYANG_BATTLE,,,50,125
+Renegade,Renegade Spoil - Zoltan,weapon,BEAM_BATTERY,,,50,125
+Renegade,Renegade Spoil - Monk,weapon,ION_CHAIN_CHARGEGUN,,,75,188
+Renegade,Renegade Spoil - Duskbringer,weapon,SHOTGUN_STEEL,,,110,275
+Renegade,Renegade Spoil - Mantis,weapon,BOMB_CONSERVRECYCLER,,,75,188
+Renegade,Renegade Spoil - Free Mantis,weapon,UNSPOOLER,,,90,225
+Renegade,Renegade Spoil - Rock,weapon,MISSILES_OBSIDIAN,,,80,200
+Renegade,Renegade Spoil - Lost Sun,weapon,FROST_CHARGEGUN,,,80,200
+Renegade,Renegade Spoil - Crystal,weapon,CRYSTAL_BURST_FIRE,,,90,225
+Renegade,Renegade Spoil - Slug,weapon,BIG_ION,,,100,250
+Renegade,Renegade Spoil - Guild,weapon,SNIPER,,,75,188
+Renegade,Renegade Spoil - Orchid,weapon,STRAWBERRY,,,95,238
+Renegade,Renegade Spoil - Vampweed,drone,FOREMAN_BATTLE,,,80,200
+Renegade,Renegade Spoil - Shell,weapon,SHELL_LAUNCHER,,,65,163
+Renegade,Renegade Spoil - Leech,weapon,BOMB_DRAIN,,,80,200
+Renegade,Renegade Spoil - Coalition,augment,ANTICOAL_AUG,,,110,275
+Renegade,Renegade Spoil - Lanius,weapon,SHOTGUN_TOGGLE_FIRE,,,100,250
+Renegade,Renegade Spoil - Horse,crew,pony_engi,"amount=""1"" all_skills=""1"" class=""pony_engi""",3QU3STR14,30,75
+Renegade,Renegade Spoil - MFK,weapon,BOMB_ELITE,,,80,200
+Renegade,Renegade Spoil - Angel,weapon,BEAM_HACK,,,90,225
+Renegade,Renegade Spoil - Spider,crew,spider_venom,"amount=""1"" all_skills=""1"" class=""spider_venom""",夏洛特,100,250
+Renegade,Renegade Spoil - Osmian,drone,HOLODRONE_BATTLE,,,50,125
+Renegade,Renegade Spoil - Salt,drone,SALT_MINER,,,80,200
+Renegade,Renegade Spoil - Sylvan,weapon,GASTER_BLASTER,,,95,238
+Renegade,Renegade Spoil - Hektar,weapon,HEKTAR_MODULAR_CHARGE_REWARD,,,80,200
+Renegade,Renegade Spoil - Morph,weapon,SYMBIONT,,,85,213
+Chaos Renegade,Chaos Spoil - Kestrel,weapon,LASER_LIGHT_CHARGEGUN_CHAOS,,,70,280
+Chaos Renegade,Chaos Spoil - Federation,weapon,MINELAUNCHER_GIANT_CHAOS,,,150,600
+Chaos Renegade,Chaos Spoil - Stealth,weapon,BEAM_ADAPT_3_CHAOS,,,140,560
+Chaos Renegade,Chaos Spoil - Engineer,drone,SURGEON_BATTLE_CHAOS,,,50,200
+Chaos Renegade,Chaos Spoil - MV Rebel,weapon,BEAM_QUICK_CHAOS,,,70,280
+Chaos Renegade,Chaos Spoil - Tuco,weapon,SLOTGUN_CHAOS,,,90,360
+Chaos Renegade,Chaos Spoil - Engi,drone,DEFENSE_TRINITY_CHAOS,,,100,400
+Chaos Renegade,Chaos Spoil - Separatist,drone,YINYANG_BATTLE_CHAOS,,,50,200
+Chaos Renegade,Chaos Spoil - Zoltan,weapon,BEAM_BATTERY_CHAOS,,,50,200
+Chaos Renegade,Chaos Spoil - Monk,weapon,ION_CHAIN_CHARGEGUN_CHAOS,,,75,300
+Chaos Renegade,Chaos Spoil - Duskbringer,weapon,SHOTGUN_STEEL_CHAOS,,,110,440
+Chaos Renegade,Chaos Spoil - Mantis,weapon,BOMB_CONSERVRECYCLER_CHAOS,,,75,300
+Chaos Renegade,Chaos Spoil - Free Mantis,weapon,UNSPOOLER_CHAOS,,,90,360
+Chaos Renegade,Chaos Spoil - Rock,weapon,MISSILES_OBSIDIAN_CHAOS,,,80,320
+Chaos Renegade,Chaos Spoil - Lost Sun,weapon,FROST_CHARGEGUN_CHAOS,,,80,320
+Chaos Renegade,Chaos Spoil - Crystal,weapon,CRYSTAL_BURST_FIRE_CHAOS,,,90,360
+Chaos Renegade,Chaos Spoil - Slug,weapon,BIG_ION_CHAOS,,,100,400
+Chaos Renegade,Chaos Spoil - Guild,weapon,SNIPER_CHAOS,,,75,300
+Chaos Renegade,Chaos Spoil - Orchid,weapon,STRAWBERRY_CHAOS,,,120,480
+Chaos Renegade,Chaos Spoil - Vampweed,drone,FOREMAN_BATTLE_CHAOS,,,80,320
+Chaos Renegade,Chaos Spoil - Shell,weapon,SHELL_LAUNCHER_CHAOS,,,65,260
+Chaos Renegade,Chaos Spoil - Leech,weapon,BOMB_DRAIN_CHAOS,,,80,320
+Chaos Renegade,Chaos Spoil - Coalition,augment,ANTICOAL_AUG_CHAOS,,,110,440
+Chaos Renegade,Chaos Spoil - Lanius,weapon,SHOTGUN_TOGGLE_CHAOS,,,100,400
+Chaos Renegade,Chaos Spoil - Horse,crew,pony_engi_chaos,"amount=""1"" all_skills=""1"" class=""pony_engi_chaos""",3QU3STR14,30,120
+Chaos Renegade,Chaos Spoil - MFK,weapon,BOMB_ELITE_CHAOS,,,80,320
+Chaos Renegade,Chaos Spoil - Angel,weapon,BEAM_HACK_CHAOS,,,90,360
+Chaos Renegade,Chaos Spoil - Spider,crew,spider_venom_chaos,"amount=""1"" all_skills=""1"" class=""spider_venom_chaos""",夏洛特,100,400
+Chaos Renegade,Chaos Spoil - Osmian,drone,HOLODRONE_BATTLE_CHAOS,,,50,200
+Chaos Renegade,Chaos Spoil - Salt,drone,SALT_MINER_CHAOS,,,80,320
+Chaos Renegade,Chaos Spoil - Sylvan,weapon,GASTER_BLASTER_CHAOS,,,95,380
+Chaos Renegade,Chaos Spoil - Hektar,weapon,HEKTAR_MODULAR_CHARGE_CHAOS_REWARD,,,80,320
+Chaos Renegade,Chaos Spoil - Morph,weapon,SYMBIONT_CHAOS,,,85,340
+Transport,Rebel Spoil,weapon,LOOT_REBEL_1,,,75,113
+Transport,Cultist Spoil,weapon,LOOT_CULTIST_1,,,65,98
+Transport,Coalition Spoil,weapon,LOOT_COALITION_1,,,60,90
+Transport,Rock Spoil,weapon,LOOT_ROCK_1,,,60,90
+Transport,Militia Spoil,weapon,LOOT_MILITIA_1,,,70,105
+Transport,Duskbringer Spoil,weapon,LOOT_DUSKBRINGER_1,,,50,75
+Transport,Guild Spoil,weapon,LOOT_CLAN_1,,,50,75
+Transport,Lanius Spoil,weapon,LOOT_LANIUS_1,,,80,120
+Transport,Leech Spoil,weapon,LOOT_LEECH_1,,,65,98
+Transport,Knight Spoil,weapon,LOOT_KNIGHT_1,,,55,83
+Transport,Union Spoil,weapon,LOOT_UNION_1,,,50,75
+Transport,Union Spoil II,weapon,LOOT_UNION_2,,,45,68
+Transport,Federation Spoil,weapon,LOOT_FEDERATION_1,,,65,98
+Transport,Federation Spoil II,weapon,LOOT_FEDERATION_2,,,70,105
+Transport,Ministry Spoil,weapon,LOOT_ZOLTAN_1,,,60,90
+Transport,Mantis Spoil,weapon,LOOT_MANTIS_1,,,45,68
+Transport,Mantis Spoil II,weapon,LOOT_MANTIS_2,,,55,83
+Transport,Free Mantis Spoil,weapon,LOOT_FREEMANTIS_1,,,60,90
+Transport,Free Mantis Spoil II,weapon,LOOT_FREEMANTIS_2,,,52,78
+Transport,Lost Sun Spoil,weapon,LOOT_LOSTSUN_1,,,50,75
+Transport,Lost Sun Spoil II,weapon,LOOT_LOSTSUN_2,,,70,105
+Transport,Slug Spoil,weapon,LOOT_SLUG_1,,,50,75
+Transport,Slug Spoil II,weapon,LOOT_SLUG_2,,,50,75
+Transport,Dynasty Spoil,weapon,LOOT_DYNASTY_1,,,50,75
+Transport,Dynasty Spoil II,weapon,LOOT_DYNASTY_2,,,95,143
+Transport,Shell Spoil,weapon,LOOT_SHELL_1,,,75,113
+Transport,Shell Spoil II,weapon,LOOT_SHELL_2,,,90,135
+Transport,Auto Drone Spoil,drone,LIST_LOOT_AUTO,,,55,83
+Transport,Harmony Drone Spoil,drone,LIST_LOOT_ENGI,,,50,75
+Transport,Separatist Drone Spoil,drone,LIST_LOOT_SEPARATIST,,,50,75
+Transport,Estate Drone Spoil,drone,LIST_LOOT_ESTATE,,,60,90
+Transport,Augmented Drone Spoil,drone,LIST_LOOT_AUG,,,50,75

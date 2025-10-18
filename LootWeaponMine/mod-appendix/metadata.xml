@@ -5,26 +5,17 @@
     <![CDATA[ https://github.com/nexor-source/LootWeaponStart ]]>
   </threadUrl>
   <author>CURA</author>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <description>
     <![CDATA[
-Buy exactly one loot item (weapon or drone) per run from the Storage menu.
+Loot Weapon Mine adds a contraband shop to the Storage interface whenever the Storage event is available. Unlock new shelves by completing faction Transport achievements or defeating Multiverse renegades, then spend your single-per-run allowance on a weapon, drone, augment, or specialist crew member. Rarity-based pricing (Transport ~1.5x, Renegade ~2.5x, Chaos Renegade ~4x) keeps choices meaningful, and the locker seals once a purchase is made.
 
-- Options are gated by your unlocked Transport achievements; only factions you've completed appear
-- Accessible from the Storage button any time it's available
-- Costs scrap equal to the blueprint's listed price (no freebies)
-- After purchase, the locker seals and the option disables for the run
+中文简介：
+Loot Weapon Mine 会在“仓库”界面新增一个永远开放的战利品商店，只要仓库事件出现就能随时浏览。完成各派系的 Transport 成就或击败 Multiverse 变元者即可解锁更多物品，每次运行仍然只能购买一件武器、无人机、插件或特殊船员。Transport / Renegade / Chaos Renegade 商品价格分别约为原价 1.5 倍、2.5 倍、4 倍。
 
-中文说明：
-- 每局可在“仓库”中购买且仅购买 1 件战利品（武器或无人机）
-- 购买选项根据你已解锁的“运输（Transport）”成就解锁；只显示你已完成的派系
-- 购买价格等同于蓝图标价（没有免费获取）
-- 购买后储物柜封存，本轮无法再次购买
-
-Requirements & load order:
-- Requires FTL: Multiverse + Hyperspace
-- Patch after Multiverse; compatible with Judge Boon Selector
+Requirements:
+- FTL: Multiverse + Hyperspace
+- Load after Multiverse (compatible with Judge Boon Selector)
 ]]>
   </description>
 </metadata>
-
