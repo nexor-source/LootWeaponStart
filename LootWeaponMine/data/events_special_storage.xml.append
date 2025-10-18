@@ -9,9 +9,14 @@
 
   <!-- Selection event -->
   <event name="LW_LOOT_WEAPON_SELECT">
-    <text>Down in the ship's storage, the quartermaster unlocks a crate of seized contraband. Due to rationing, regulations allow exactly one purchase before departure. Your scrap readout shows the price of each label; after buying, the locker is sealed for this run.</text>
+    <text>Down in the ship's storage, the quartermaster unlocks a crate of seized contraband. Due to rationing, regulations allow *EXACTLY ONE PURCHASE* before departure. Your scrap readout shows the price of each label; after buying, the locker is sealed for this run.</text>
 
     <!-- Singles -->
+    <choice>
+      <text>Return to preparations</text>
+      <event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event>
+    </choice>
+    
     <choice req="ACH ACH_TRANS_REBEL">
       <text>Rebel Spoil</text>
       <event>
@@ -432,9 +437,5 @@
       </event>
     </choice>
 
-    <choice>
-      <text>Return to preparations</text>
-      <event><loadEvent>STORAGE_CHECK_BUTTON</loadEvent></event>
-    </choice>
   </event>
 </FTL>

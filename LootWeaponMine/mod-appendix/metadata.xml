@@ -4,8 +4,8 @@
   <threadUrl>
     <![CDATA[ https://github.com/nexor-source/LootWeaponStart ]]>
   </threadUrl>
-  <author>Codex</author>
-  <version>1.0.0</version>
+  <author>CURA</author>
+  <version>1.0.1</version>
   <description>
     <![CDATA[
 Buy exactly one loot item (weapon or drone) per run from the Storage menu.
